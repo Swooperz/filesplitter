@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Splitter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>File Splitter</h1>
+        <p>Upload a text-based file and split it into smaller parts.</p>
+
+        <div class="upload-section">
+            <label for="fileInput" class="file-label">
+                <span>Drag & Drop your file here or click to browse</span>
+                <input type="file" id="fileInput" accept=".txt,.csv,.log,.json,.xml,.html,.css,.js">
+            </label>
+            <div id="fileName" class="file-name-display">No file selected</div>
+            <div id="fileSize" class="file-info-display">File size: N/A</div>
+        </div>
+
+        <div class="controls-section" style="display: none;">
+            <label for="partsInput">Number of parts to split into:</label>
+            <input type="number" id="partsInput" min="2" value="2">
+            <div id="partSizeInfo" class="file-info-display">Each part will be approx. N/A</div>
+            <button id="splitButton">Split File</button>
+        </div>
+
+        <div class="results-section" style="display: none;">
+            <h2>Download Parts</h2>
+            <div id="downloadLinks"></div>
+        </div>
+
+        <div id="errorMessages" class="error-display"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

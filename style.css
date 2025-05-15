@@ -1,0 +1,192 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+    margin-bottom: 25px;
+    font-size: 0.95em;
+}
+
+.upload-section {
+    margin-bottom: 25px;
+    border: 2px dashed #007bff;
+    border-radius: 8px;
+    padding: 25px;
+    background-color: #f8f9fa;
+    transition: background-color 0.3s ease;
+}
+
+.upload-section.dragover {
+    background-color: #e9ecef;
+}
+
+.file-label {
+    display: block;
+    cursor: pointer;
+    padding: 20px;
+    transition: background-color 0.2s ease;
+}
+
+.file-label:hover {
+    background-color: #e2e6ea;
+}
+
+.file-label span {
+    font-size: 1em;
+    color: #007bff;
+    font-weight: 500;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.file-name-display, .file-info-display {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.controls-section {
+    margin-bottom: 25px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.controls-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+    text-align: left;
+}
+
+input[type="number"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.results-section {
+    margin-top: 25px;
+}
+
+.results-section h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+#downloadLinks a {
+    display: block;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#downloadLinks a:hover {
+    background-color: #1e7e34;
+}
+
+.error-display {
+    color: #d9534f;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 20px;
+    display: none; /* Hidden by default */
+    text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .file-label span {
+        font-size: 0.9em;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 0.95em;
+    }
+
+    input[type="number"] {
+        font-size: 0.95em;
+    }
+}
